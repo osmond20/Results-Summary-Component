@@ -1,0 +1,262 @@
+//fonts
+$font: 'Hanken Grotesk', sans-serif;
+$font-size: 1.125rem;
+$font-weight1:500;
+$font-weight2:700;
+$font-weight3:800;
+
+// colors
+:root{
+    // primary colors
+    --light-red: hsl(0, 100%, 67%);
+    --light-red-2: hsl(0, 100%, 96%);
+    --orangey-yellow:hsl(39, 100%, 56%);
+    --orangey-yellow-2: hsl(39, 100%, 94%);
+    --green-teal:hsl(166, 100%, 37%);
+    --green-teal-2: hsl(166, 100%, 94%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --cobalt-blue-2: hsl(234, 100%, 94%);
+    // graidents
+    --light-slate-blue-background:hsl(252, 100%, 67%);
+    --light-royal-blue-background:hsl(241, 81%, 54%);
+    --violet-blue-circle:hsla(256, 72%, 46%, 1);
+    --persian-blue-circle:hsla(241, 72%, 46%, 0);
+    // neutral
+    --white: hsl(0, 0%, 100%);
+    --pale-blue:hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue:hsl(224, 30%, 27%);
+    --gray: #BFC6C4;
+}
+
+*::before, *::after, *{
+    box-sizing: border-box;
+    font-size: $font-size;
+    font-family: $font;
+}
+
+body, main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.parent_container{
+    background-color: var(--white);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.result_card{
+    background-image: linear-gradient(to bottom, var(--light-slate-blue-background), var(--light-royal-blue-background) );
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-lavender);
+
+
+    h2{
+        font-size: 1.5rem;
+    }
+    span, h2{
+        color: var(--white);
+    }
+
+    .score{
+        width: 200px;
+        border-radius: 50%;
+        height:200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to bottom, var(--violet-blue-circle), var(--persian-blue-circle));
+    
+
+        span{
+            font-size: 3rem;
+        }
+
+        p{
+            margin:0;
+            padding: 0;
+        }
+    }
+
+    .review{
+        font-size: 1rem;
+        width: 250px;
+        text-align: center;
+    }
+}
+
+.summary_card{
+    height: 100%;
+    width: 275px;
+    display: grid;
+    grid-template-rows: repeat(6, 65px);
+    padding-top: 15px;
+    
+
+        h3{
+            font-size: 1.15rem;
+        }
+
+        .metric{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 50px;
+            width: 275px;
+            margin: 0;
+            padding: 0;
+
+            .metric_attribute{
+                display: flex;
+                align-items: center;
+                width: 200px;
+            }
+
+            .icon{
+                margin-left: 10px;
+                height: 30px;
+            }
+
+            p{
+                margin-right: 42.5px;
+                font-size: 0.85rem;
+            }
+
+            .rate{
+                padding-right: 15px;
+                font-size: 0.85rem;
+                color: var(--gray);
+
+                span{
+                    font-size: 0.85rem;
+                    font-weight: $font-weight3;
+                    color: var(--dark-gray-blue);
+                }
+            }
+           
+
+            &:nth-child(2){
+                background-color: var(--light-red-2);
+                border-radius: 10px;
+                justify-self: center;
+
+                p{
+                    color: var(--light-red);
+                }
+            }
+
+            &:nth-child(3){
+                background-color: var(--orangey-yellow-2);
+                border-radius: 10px;
+                justify-self: center;
+                    p{
+                    color: var(--orangey-yellow);
+                }
+            }
+
+            &:nth-child(4){
+                background-color: var(--green-teal-2);
+                border-radius: 10px;
+                justify-self: center;
+                    p{
+                    color: var(--green-teal);
+                }
+            }
+
+            &:nth-child(5){
+                background-color: var(--cobalt-blue-2);
+                border-radius: 10px;
+                justify-self: center;
+
+                    p{
+                    color: var(--cobalt-blue);
+                }
+            }
+        }
+    
+
+        .continue{  
+            justify-self: center;
+            height:50px;          
+            width: 100%;
+            border-radius: 25px;
+            border: none;
+            background-image: linear-gradient(var(--dark-gray-blue));
+            color:var(--white);
+            font-size: 1rem;
+            transition: background-image 0.5s ease;
+        }
+
+        .continue:hover{
+            background-image: linear-gradient(to bottom,var(--light-slate-blue-background), var(--light-royal-blue-background   ));
+        }
+        
+        .continue:focus{
+            outline: 2px solid black;
+            outline-offset: .25rem;
+        }
+}
+
+
+
+@media(min-width:40rem){
+
+    body,main{
+        background-color: var(--pale-blue);
+        height: 100vh;
+    }
+   
+    .parent_container{
+        height: 450px;
+        width: 600px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        border-radius: 30px;
+    }
+
+    .result_card{
+        border-radius: 30px;
+        height: 100%;
+        max-width: 300px;
+        display: flex;
+        color: var(--light-lavender);
+        box-shadow: none;
+
+        .score{
+            height: 180px;
+            width: 180px;
+        }
+
+        h2{
+            margin: 0;
+        }
+    }
+
+    .summary_card{
+        max-height: 400px;
+        max-width: 250px;
+        padding-left: 25px;
+
+        .metric{
+            height: 45px;
+            width: 250px;
+        }
+    }
+}
