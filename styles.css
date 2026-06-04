@@ -112,6 +112,7 @@ body, main {
   height: 1.875rem;
 }
 .summary_card .metric p {
+  margin-left: 0.5rem;
   margin-right: 2.65;
   font-size: 0.85rem;
 }

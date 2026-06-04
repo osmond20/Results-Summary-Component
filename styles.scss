@@ -53,7 +53,6 @@ body, main{
     align-items: center;
 }
 
-
 .result_card{
     background-image: linear-gradient(to bottom, var(--light-slate-blue-background), var(--light-royal-blue-background) );
     border-bottom-left-radius: 1.875rem;
@@ -132,6 +131,7 @@ body, main{
             }
 
             p{
+                margin-left: 0.5rem;
                 margin-right: 2.65;
                 font-size: 0.85rem;
             }
