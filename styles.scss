@@ -56,15 +56,15 @@ body, main{
 
 .result_card{
     background-image: linear-gradient(to bottom, var(--light-slate-blue-background), var(--light-royal-blue-background) );
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 1.875rem;
+    border-bottom-right-radius: 1.875rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: var(--light-lavender);
-
+    box-shadow: 10px 45px 20px var(--pale-blue);
 
     h2{
         font-size: 1.5rem;
@@ -74,15 +74,14 @@ body, main{
     }
 
     .score{
-        width: 200px;
+        width: 12.5rem;
         border-radius: 50%;
-        height:200px;
+        height:12.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         background-image: linear-gradient(to bottom, var(--violet-blue-circle), var(--persian-blue-circle));
-    
 
         span{
             font-size: 3rem;
@@ -96,50 +95,49 @@ body, main{
 
     .review{
         font-size: 1rem;
-        width: 250px;
+        width: 15.625rem;
         text-align: center;
     }
 }
 
 .summary_card{
     height: 100%;
-    width: 275px;
+    width: 17.2rem;
     display: grid;
-    grid-template-rows: repeat(6, 65px);
-    padding-top: 15px;
+    grid-template-rows: repeat(6, 4.1rem);
+    padding-top: 0.94rem;
     
-
         h3{
-            font-size: 1.15rem;
+            font-size: clamp(1rem, 2vw, 1.15rem);
         }
 
         .metric{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 50px;
-            width: 275px;
+            height: 3.125rem;
+            width: 17.9rem;
             margin: 0;
             padding: 0;
 
             .metric_attribute{
                 display: flex;
                 align-items: center;
-                width: 200px;
+                width: 12.5rem;
             }
 
             .icon{
-                margin-left: 10px;
-                height: 30px;
+                margin-left: 0.625rem;
+                height: 1.875rem;
             }
 
             p{
-                margin-right: 42.5px;
+                margin-right: 2.65;
                 font-size: 0.85rem;
             }
 
             .rate{
-                padding-right: 15px;
+                padding-right: 0.94rem;
                 font-size: 0.85rem;
                 color: var(--gray);
 
@@ -153,7 +151,7 @@ body, main{
 
             &:nth-child(2){
                 background-color: var(--light-red-2);
-                border-radius: 10px;
+                border-radius: 0.625rem;
                 justify-self: center;
 
                 p{
@@ -163,7 +161,7 @@ body, main{
 
             &:nth-child(3){
                 background-color: var(--orangey-yellow-2);
-                border-radius: 10px;
+                border-radius: 0.625rem;
                 justify-self: center;
                     p{
                     color: var(--orangey-yellow);
@@ -172,7 +170,7 @@ body, main{
 
             &:nth-child(4){
                 background-color: var(--green-teal-2);
-                border-radius: 10px;
+                border-radius: 0.625rem;
                 justify-self: center;
                     p{
                     color: var(--green-teal);
@@ -181,7 +179,7 @@ body, main{
 
             &:nth-child(5){
                 background-color: var(--cobalt-blue-2);
-                border-radius: 10px;
+                border-radius: 0.625rem;
                 justify-self: center;
 
                     p{
@@ -189,13 +187,12 @@ body, main{
                 }
             }
         }
-    
 
         .continue{  
             justify-self: center;
-            height:50px;          
+            height:3.125rem;          
             width: 100%;
-            border-radius: 25px;
+            border-radius: 1.56rem;
             border: none;
             background-image: linear-gradient(var(--dark-gray-blue));
             color:var(--white);
@@ -213,35 +210,32 @@ body, main{
         }
 }
 
-
-
 @media(min-width:40rem){
-
     body,main{
         background-color: var(--pale-blue);
         height: 100vh;
     }
    
     .parent_container{
-        height: 450px;
-        width: 600px;
+        height: 28.1rem;
+        width: 37.5rem;
         flex-direction: row;
         align-items: center;
         justify-content: start;
-        border-radius: 30px;
+        border-radius: 1.9rem;
     }
 
     .result_card{
-        border-radius: 30px;
+        border-radius: 1.9rem;
         height: 100%;
-        max-width: 300px;
+        max-width: 19rem;
         display: flex;
         color: var(--light-lavender);
         box-shadow: none;
 
         .score{
-            height: 180px;
-            width: 180px;
+            height: 11rem;
+            width: 11rem;
         }
 
         h2{
@@ -250,13 +244,13 @@ body, main{
     }
 
     .summary_card{
-        max-height: 400px;
-        max-width: 250px;
-        padding-left: 25px;
+        max-height: 25rem;
+        max-width: 15.6rem;
+        padding-left: 1.56rem;
 
         .metric{
-            height: 45px;
-            width: 250px;
+            height: 2.81rem;
+            width: 15.6rem;
         }
     }
 }
