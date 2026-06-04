@@ -98,7 +98,7 @@ body, main {
   align-items: center;
   justify-content: space-between;
   height: 3.125rem;
-  width: 17.9rem;
+  width: 17rem;
   margin: 0;
   padding: 0;
 }
@@ -119,6 +119,9 @@ body, main {
 .summary_card .metric .rate {
   padding-right: 0.94rem;
   font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   color: var(--gray);
 }
 .summary_card .metric .rate span {
