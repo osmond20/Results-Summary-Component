@@ -72,6 +72,7 @@ body, main {
 }
 .result_card .score span {
   font-size: 3rem;
+  font-weight: 800;
 }
 .result_card .score p {
   margin: 0;
