@@ -172,10 +172,14 @@ body, main {
   background-image: linear-gradient(var(--dark-gray-blue));
   color: var(--white);
   font-size: 1rem;
+  scale: 1;
   transition: background-image 0.5s ease;
+  transition: scale 0.3s ease;
 }
 .summary_card .continue:hover {
   background-image: linear-gradient(to bottom, var(--light-slate-blue-background), var(--light-royal-blue-background));
+  scale: 1.04;
+  cursor: pointer;
 }
 .summary_card .continue:focus {
   outline: 2px solid black;
